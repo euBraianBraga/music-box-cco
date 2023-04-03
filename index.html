@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Primeira Aula React 01</title>
+
+    <!-- scripts do React e ReactDOM, para utilizarmos as funcionalidades da biblioteca -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- script do Babel, que serve para interpretar o JSX e transpilar as tags HTML para JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.19.2/babel.js"
+        integrity="sha512-64/6lwPXsrPZPcaie7HUYPLFImrNOjYW0UCktuM+NZpI78Xhnyc/yjqxFvs4GGSP2cCQCkv+c74OxCQ94emr0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- essa div identificada como "root" é o único elemento HTML que precisaremos, pois iremos adicionar outros componentes nesse elemento através do React -->
+    <div id="root"></div>
+
+    <!-- o script deve vir após a criação do elemento "root", senão, a tag não existirá quando o script for executado -->
+    <script type="text/babel" src="./index.js"></script>
+    <!-- <script type="text/babel" src="./index.js"></script> -->
+    <!-- "text/babel" - indica para o código que esse script precisará do babel para transpilar algum trecho do código  -->
+</body>
+
+</html>
