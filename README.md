@@ -1,48 +1,70 @@
-![Group 2](https://user-images.githubusercontent.com/53722984/228359766-6595c300-f52c-4144-861c-4cb840be09cc.png)
+# Getting Started with Create React App
 
-# Music Box 
-![Badge](https://img.shields.io/badge/Code-react-0366d6?&logo=react) 
-![Badge](https://img.shields.io/badge/Figma-layout-76608a?&logo=api)
-![Badge](https://img.shields.io/badge/API-integration-4c9d1f?&logo=api)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-### **Music Box** é uma aplicação front-end que representa um dicionário músical desenvolvido para facilitar o aprendizado de **react** em contextos acadêmicos. Esse projeto visa ajudar os alunos da Faculdade [@SPTECH](https://github.com/BandTec) em projetos na disciplina de Pesquisa e Inovação.
-#
-### **Tópicos abordados:**
-Transformação de site (HTML e CSS) em projeto React, incluindo:
-- Conceitos de funcionamento da biblioteca react (Virtual DOM, JSX) 
-- Componentização de elementos da interface
-- Routes
-- Integração com API Spring Boot (CRUD)
+In the project directory, you can run:
 
-### **Layout:**
-<img width="40%" src="https://user-images.githubusercontent.com/37668247/133509120-e5363380-6d26-4b7b-b444-322bd14b5a3e.png"/> <img width="40%" src="https://user-images.githubusercontent.com/37668247/133509113-d487dee5-79e1-44bb-b295-87b8e1f8dfe2.png"/>
-<img width="40%" src="https://user-images.githubusercontent.com/53583561/159533833-3eb4c6a8-5c11-4214-8f9e-899b9bdbddc1.png"/> <img width="40%" src="https://user-images.githubusercontent.com/37668247/133509129-978a06c2-7541-468e-b475-02474c39a8b4.png"/> 
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-# 
+### `npm test`
 
-## Instalação
-**Clone ou faça download do projeto, abra o diretório raiz (music-box) no VS Code, e no terminal execute**:
-```
-npm install
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-**Após terminar, execute:**
-```
-npm start
-```
-#
-## Arquitetura do projeto **(Versão 2)**
+### `npm run build`
 
-![image](https://user-images.githubusercontent.com/53583561/193896770-592ab4fc-3a47-4c09-920e-92d9351ce8e8.png)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Criado por
-- @miniguiti (giuliana.franca@sptech.school)
-- @fernandacaramico (fernanda.caramico@sptech.school)
-- @reisrb (rafael.reis@sptech.school)
-- @joaopedpaula (joao.paula@sptech.school)
-- @euBraianBraga (braian.braga@sptech.school)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
