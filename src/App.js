@@ -1,8 +1,8 @@
-import Votacao from "./pages/Votacao";
+import Musicas from "./pages/Musicas";
 
 function App() {
   return (
-    <Votacao />
+    <Musicas />
   );
 }
 
