@@ -1,34 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import api from "../api";
 import { useState } from "react";
+
+import ItemMusica from "../components/ItemMusica";
 
 function Musicas() {
   const [listaMusicas, setListaMusicas] = useState([]);
 
-  function testar() {
+  useEffect(() => {
     api
       .get()
-      .then((resposta) => {
-        console.log(resposta.data);
-        setListaMusicas(resposta.data);
+      .then((response) => {
+        setListaMusicas(response.data);
       })
       .catch((erro) => {
         console.log(erro);
       });
-  }
+  }, []);
 
   return (
     <>
-      <button onClick={testar}>Testar Requisicao</button>
+      <div class="container">
+        <div class="filter">
+          <button class="btn">Adicionar</button>
+        </div>
+      </div>
 
-        {
-            listaMusicas.map((musica) => (
-                <div>
-                    <h1>{musica.nome}</h1>
-                </div>
-            )) 
-        }
-
+      <div class="container">
+        <div class="music-boxes">
+          {listaMusicas.map((musica) => (
+            <ItemMusica
+              nome={musica.nome}
+              artista={musica.artista}
+              genero={musica.genero}
+              ano={musica.ano}
+            />
+          ))}
+        </div>
+      </div>
     </>
   );
 }
