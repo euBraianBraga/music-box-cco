@@ -1,39 +1,113 @@
+import api from "../api";
 import React from "react";
+import capaPadrao from "../html-css-template/imagens/capa.png";
+import iconeEditar from "../html-css-template/imagens/edit-icon.png";
+import iconeDeletar from "../html-css-template/imagens/delete-icon.png";
+import { useState } from "react";
 
 function ItemMusica(props) {
+  const estiloCard = {
+    backgroundImage: `url(${props.capa ? props.capa : capaPadrao})`
+  };
+
+  const [editando, setEditando] = useState(false);
+
+  const [inputNome, setInputNome] = useState(props.nome);
+  const [inputArtista, setInputArtista] = useState(props.artista);
+  const [inputGenero, setInputGenero] = useState(props.genero);
+  const [inputAno, setInputAno] = useState(props.ano);
+
+  function atualizarMusica() {
+    const corpoRequisicao = {
+      nome: inputNome,
+      artista: inputArtista,
+      genero: inputGenero,
+      ano: inputAno
+    };
+
+    api
+      .put(`/${props.id}`, corpoRequisicao)
+      .then(() => {
+        alert("deu certo, foi editado");
+      })
+      .catch(() => {
+        alert("deu erro");
+      });
+
+    setEditando(false);
+  }
+
   return (
     <>
-      <div class="card-music">
-        <div class="icons">
-          <img src="../imagens/edit-icon.png" alt="" />
-          <img src="../imagens/delete-icon.png" alt="" />
+      <div style={estiloCard} className="card-music">
+        <div className="icons">
+          <img onClick={() => setEditando(true)} src={iconeEditar} alt="" />
+          <img src={iconeDeletar} alt="" />
         </div>
-        <div class="info-music">
+
+        <div className="info-music">
           <p>
-            <strong class="card-title">música: </strong>
-            <input class="input-music-enable" type="text" value={props.nome} />
-          </p>
-          <p>
-            <strong class="card-title">artista: </strong>
+            <strong className="card-title">música: </strong>
             <input
-              class="input-music-enable"
               type="text"
-              value={props.artista}
+              defaultValue={inputNome}
+              disabled={editando === false}
+              className={
+                editando ? "input-music-enable" : "input-music-disabled"
+              }
+              onChange={(eventoRecebido) =>
+                setInputNome(eventoRecebido.target.value)
+              }
             />
           </p>
           <p>
-            <strong class="card-title">categoria: </strong>
+            <strong className="card-title">artista: </strong>
             <input
-              class="input-music-enable"
+              className={
+                editando ? "input-music-enable" : "input-music-disabled"
+              }
               type="text"
-              value={props.genero}
+              defaultValue={inputArtista}
+              disabled={editando === false}
+              onChange={(eventoRecebido) =>
+                setInputArtista(eventoRecebido.target.value)
+              }
             />
           </p>
           <p>
-            <strong class="card-title">ano: </strong>
-            <input class="input-music-enable" type="text" value={props.ano} />
+            <strong className="card-title">categoria: </strong>
+            <input
+              className={
+                editando ? "input-music-enable" : "input-music-disabled"
+              }
+              type="text"
+              defaultValue={inputGenero}
+              disabled={editando === false}
+              onChange={(eventoRecebido) =>
+                setInputGenero(eventoRecebido.target.value)
+              }
+            />
           </p>
-          <button class="btn-salvar-enable">Salvar</button>
+          <p>
+            <strong className="card-title">ano: </strong>
+            <input
+              className={
+                editando ? "input-music-enable" : "input-music-disabled"
+              }
+              type="text"
+              defaultValue={inputAno}
+              disabled={editando === false}
+              onChange={(eventoRecebido) =>
+                setInputAno(eventoRecebido.target.value)
+              }
+            />
+          </p>
+          <button
+            onClick={() => atualizarMusica()}
+            className={editando ? "btn-salvar-enable" : "btn-salvar-disabled"}
+          >
+            Salvar
+          </button>
         </div>
       </div>
     </>

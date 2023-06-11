@@ -20,20 +20,23 @@ function Musicas() {
 
   return (
     <>
-      <div class="container">
-        <div class="filter">
-          <button class="btn">Adicionar</button>
+      <div className="container">
+        <div className="filter">
+          <button className="btn">Adicionar</button>
         </div>
       </div>
 
-      <div class="container">
-        <div class="music-boxes">
+      <div className="container">
+        <div className="music-boxes">
           {listaMusicas.map((musica) => (
             <ItemMusica
+              key={musica.id}
+              id={musica.id}
               nome={musica.nome}
               artista={musica.artista}
               genero={musica.genero}
               ano={musica.ano}
+              capa={musica.imagem}
             />
           ))}
         </div>
